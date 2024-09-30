@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#f8fcff]">
+    <div class="container mx-auto p-6">
+        <h2 class="text-3xl font-bold mb-6">Login</h2>
+        <form id="loginForm" class="bg-white p-4 rounded shadow-md">
+            <div class="mb-4">
+                <label for="email" class="block text-sm font-medium">Email:</label>
+                <input type="email" id="email" name="email" required class="border p-2 w-full" />
+            </div>
+            <div class="mb-4">
+                <label for="password" class="block text-sm font-medium">Password:</label>
+                <input type="password" id="password" name="password" required class="border p-2 w-full" />
+            </div>
+            <button type="submit" class="bg-blue-600 text-white p-2 rounded">Login</button>
+        </form>
+        <div id="message" class="mt-4"></div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = e.target.email.value;
+            const password = e.target.password.value;
+
+            const response = await fetch('/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email, password }),
+            });
+
+            const data = await response.json();
+            document.getElementById('message').innerText = data.message;
+
+            // Redirect to another page upon successful login
+            if (response.ok) {
+                setTimeout(() => {
+                    window.location.href = 'index.html'; // Redirect to the homepage or another page
+                }, 1000);
+            }
+        });
+    </script>
+</body>
+</html>

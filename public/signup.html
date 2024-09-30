@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#f8fcff]">
+    <div class="container mx-auto p-6">
+        <h2 class="text-3xl font-bold mb-6">Signup</h2>
+        <form id="signupForm" class="bg-white p-4 rounded shadow-md">
+            <div class="mb-4">
+                <label for="email" class="block text-sm font-medium">Email:</label>
+                <input type="email" id="email" name="email" required class="border p-2 w-full" />
+            </div>
+            <div class="mb-4">
+                <label for="password" class="block text-sm font-medium">Password:</label>
+                <input type="password" id="password" name="password" required class="border p-2 w-full" />
+            </div>
+            <button type="submit" class="bg-blue-600 text-white p-2 rounded">Sign Up</button>
+        </form>
+        <div id="message" class="mt-4"></div>
+        <p class="mt-4">Already have an account? <a href="login.html" class="text-blue-600">Login here</a></p>
+    </div>
+
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = e.target.email.value;
+            const password = e.target.password.value;
+
+            const response = await fetch('/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email, password }),
+            });
+
+            const data = await response.json();
+            document.getElementById('message').innerText = data.message;
+
+            // Redirect to login page after successful registration
+            if (response.ok) {
+                setTimeout(() => {
+                    window.location.href = 'login.html'; // Redirect to login page after signup
+                }, 1000);
+            }
+        });
+    </script>
+</body>
+</html>

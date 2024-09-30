@@ -1,0 +1,94 @@
+{
+    "grades": [
+        {
+            "grade_id": "G001",
+            "student_id": "S001",
+            "class_id": "C001",
+            "assignment_type": "Assignment 1",
+            "score": 85,
+            "max_score": 100,
+            "date": "2023-01-15"
+        },
+        {
+            "grade_id": "G002",
+            "student_id": "S001",
+            "class_id": "C001",
+            "assignment_type": "Quiz 1",
+            "score": 90,
+            "max_score": 100,
+            "date": "2023-01-22"
+        },
+        {
+            "grade_id": "G003",
+            "student_id": "S001",
+            "class_id": "C002",
+            "assignment_type": "Assignment 1",
+            "score": 78,
+            "max_score": 100,
+            "date": "2023-01-20"
+        },
+        {
+            "grade_id": "G004",
+            "student_id": "S002",
+            "class_id": "C001",
+            "assignment_type": "Assignment 1",
+            "score": 88,
+            "max_score": 100,
+            "date": "2023-01-16"
+        },
+        {
+            "grade_id": "G005",
+            "student_id": "S002",
+            "class_id": "C002",
+            "assignment_type": "Quiz 1",
+            "score": 80,
+            "max_score": 100,
+            "date": "2023-01-23"
+        },
+        {
+            "grade_id": "G006",
+            "student_id": "S003",
+            "class_id": "C003",
+            "assignment_type": "Midterm Exam",
+            "score": 92,
+            "max_score": 100,
+            "date": "2023-02-10"
+        },
+        {
+            "grade_id": "G007",
+            "student_id": "S004",
+            "class_id": "C004",
+            "assignment_type": "Lab Report",
+            "score": 75,
+            "max_score": 100,
+            "date": "2023-01-30"
+        },
+        {
+            "grade_id": "G008",
+            "student_id": "S005",
+            "class_id": "C005",
+            "assignment_type": "Research Paper",
+            "score": 90,
+            "max_score": 100,
+            "date": "2023-03-01"
+        },
+        {
+            "grade_id": "G009",
+            "student_id": "S006",
+            "class_id": "C006",
+            "assignment_type": "Midterm Exam",
+            "score": 88,
+            "max_score": 100,
+            "date": "2023-02-15"
+        },
+        {
+            "grade_id": "G010",
+            "student_id": "S007",
+            "class_id": "C007",
+            "assignment_type": "Final Project",
+            "score": 95,
+            "max_score": 100,
+            "date": "2023-04-05"
+        }
+    ]
+}

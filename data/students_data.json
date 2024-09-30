@@ -1,0 +1,74 @@
+{
+    "students": [
+        {
+            "student_id": "S001",
+            "name": "John Doe",
+            "email": "john.doe@example.com",
+            "enrollment_year": 2022,
+            "major": "Computer Science"
+        },
+        {
+            "student_id": "S002",
+            "name": "Jane Smith",
+            "email": "jane.smith@example.com",
+            "enrollment_year": 2023,
+            "major": "Information Technology"
+        },
+        {
+            "student_id": "S003",
+            "name": "Alice Brown",
+            "email": "alice.brown@example.com",
+            "enrollment_year": 2021,
+            "major": "Mathematics"
+        },
+        {
+            "student_id": "S004",
+            "name": "Bob White",
+            "email": "bob.white@example.com",
+            "enrollment_year": 2022,
+            "major": "Physics"
+        },
+        {
+            "student_id": "S005",
+            "name": "Charlie Black",
+            "email": "charlie.black@example.com",
+            "enrollment_year": 2022,
+            "major": "Biology"
+        },
+        {
+            "student_id": "S006",
+            "name": "David Green",
+            "email": "david.green@example.com",
+            "enrollment_year": 2023,
+            "major": "Chemistry"
+        },
+        {
+            "student_id": "S007",
+            "name": "Eva Blue",
+            "email": "eva.blue@example.com",
+            "enrollment_year": 2021,
+            "major": "English Literature"
+        },
+        {
+            "student_id": "S008",
+            "name": "Frank Red",
+            "email": "frank.red@example.com",
+            "enrollment_year": 2022,
+            "major": "History"
+        },
+        {
+            "student_id": "S009",
+            "name": "Grace Pink",
+            "email": "grace.pink@example.com",
+            "enrollment_year": 2023,
+            "major": "Arts"
+        },
+        {
+            "student_id": "S010",
+            "name": "Henry Gray",
+            "email": "henry.gray@example.com",
+            "enrollment_year": 2021,
+            "major": "Mathematics"
+        }
+    ]
+}

@@ -1,0 +1,74 @@
+{
+    "classes": [
+        {
+            "class_id": "C001",
+            "class_name": "Intro to Programming",
+            "subject": "Computer Science",
+            "teacher_id": "T001",
+            "semester": "Fall"
+        },
+        {
+            "class_id": "C002",
+            "class_name": "Data Structures",
+            "subject": "Computer Science",
+            "teacher_id": "T002",
+            "semester": "Fall"
+        },
+        {
+            "class_id": "C003",
+            "class_name": "Calculus I",
+            "subject": "Mathematics",
+            "teacher_id": "T003",
+            "semester": "Spring"
+        },
+        {
+            "class_id": "C004",
+            "class_name": "Organic Chemistry",
+            "subject": "Chemistry",
+            "teacher_id": "T004",
+            "semester": "Fall"
+        },
+        {
+            "class_id": "C005",
+            "class_name": "Modern History",
+            "subject": "History",
+            "teacher_id": "T005",
+            "semester": "Spring"
+        },
+        {
+            "class_id": "C006",
+            "class_name": "English Literature",
+            "subject": "English",
+            "teacher_id": "T006",
+            "semester": "Fall"
+        },
+        {
+            "class_id": "C007",
+            "class_name": "Physics I",
+            "subject": "Physics",
+            "teacher_id": "T007",
+            "semester": "Spring"
+        },
+        {
+            "class_id": "C008",
+            "class_name": "Graphic Design",
+            "subject": "Arts",
+            "teacher_id": "T008",
+            "semester": "Fall"
+        },
+        {
+            "class_id": "C009",
+            "class_name": "Web Development",
+            "subject": "Computer Science",
+            "teacher_id": "T001",
+            "semester": "Spring"
+        },
+        {
+            "class_id": "C010",
+            "class_name": "Differential Equations",
+            "subject": "Mathematics",
+            "teacher_id": "T003",
+            "semester": "Fall"
+        }
+    ]
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><a href="index.html">Student Grade Management</a></title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Add custom styles for the background image */
+        .bg-custom {
+            background-image: url('/background.jpg'); /* Replace with your image path */
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-custom h-screen">
+    <!-- Navbar -->
+    <nav class="bg-white p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Grade Management</h1>
+            <ul id="navLinks" class="flex space-x-4 hidden"> <!-- Initially hidden -->
+                <li><a href="index.html" class="hover:text-blue-600">Students</a></li>
+                <li><a href="classes.html" class="hover:text-blue-600">Classes</a></li>
+                <li><a href="grades.html" class="hover:text-blue-600">Grades</a></li>
+                <li><button id="logoutButton" class="bg-red-600 text-white p-2 rounded hidden">Logout</button></li>
+            </ul>
+            <a href="signup.html" id="signupButton" class="bg-blue-600 text-white p-2 rounded hover:bg-blue-700 transition duration-300">Sign Up</a> <!-- Always visible -->
+        </div>
+    </nav>
+
+    <!-- Welcome Message or Information -->
+    <div class="container mx-auto p-6 text-center mt-20"> <!-- Center aligned text -->
+        <h2 class="text-4xl font-bold mb-6 text-black">Welcome to the Student Grade Management System</h2>
+        <p class="mb-4 text-lg text-black">Please sign up to access the system.</p>
+    </div>
+
+    <script>
+        // Check session to display navigation links
+        fetch('/check-session')
+            .then(response => {
+                if (response.ok) {
+                    // User is logged in
+                    document.getElementById('navLinks').classList.remove('hidden'); // Show navigation links
+                    document.getElementById('signupButton').classList.add('hidden'); // Hide Sign Up button
+                    document.getElementById('logoutButton').classList.remove('hidden'); // Show Logout button
+                }
+            })
+            .catch(error => {
+                console.error('Error checking session:', error);
+            });
+
+        // Logout functionality
+        document.getElementById('logoutButton').addEventListener('click', async () => {
+            const response = await fetch('/logout', {
+                method: 'POST',
+            });
+
+            const data = await response.json();
+            alert(data.message); // Show logout message
+            window.location.href = 'login.html'; // Redirect to login page
+        });
+    </script>
+</body>
+</html>

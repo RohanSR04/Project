@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grades List</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#f8fcff]">
+    <!-- Navbar -->
+    <nav class="bg-white p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Grade Management</h1>
+            <ul class="flex space-x-4">
+                <li><a href="index.html" class="hover:text-blue-600">Students</a></li>
+                <li><a href="classes.html" class="hover:text-blue-600">Classes</a></li>
+                <li><a href="grades.html" class="hover:text-blue-600">Grades</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Grades List -->
+    <div class="container mx-auto p-6">
+        <h2 class="text-3xl font-bold mb-6">Grades List</h2>
+        <div id="gradesList" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- Dynamic content will be inserted here -->
+        </div>
+    </div>
+
+    <script>
+        // Fetch grades data from backend API
+        fetch('/grades')
+            .then(response => response.json())
+            .then(data => {
+                const gradesList = document.getElementById('gradesList');
+                data.grades.forEach(grade => {
+                    gradesList.innerHTML += `
+                    <div class="bg-white p-4 shadow-md rounded-lg">
+                        <h3 class="text-xl font-bold">Grade ID: ${grade.grade_id}</h3>
+                        <p><strong>Student ID:</strong> ${grade.student_id}</p>
+                        <p><strong>Class ID:</strong> ${grade.class_id}</p>
+                        <p><strong>Assignment Type:</strong> ${grade.assignment_type}</p>
+                        <p><strong>Score:</strong> ${grade.score} / ${grade.max_score}</p>
+                        <p><strong>Date:</strong> ${grade.date}</p>
+                    </div>`;
+                });
+            })
+            .catch(error => {
+                document.getElementById('gradesList').innerHTML = `<p class="text-red-500">Error loading grades.</p>`;
+            });
+    </script>
+</body>
+</html>
